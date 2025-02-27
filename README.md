@@ -17,7 +17,7 @@
 
 ## Швидкий старт
 ## 1. Встановлення
-
+```
 git clone https://github.com/vladsel/text-analyzer-OpenAI-LLM.git
 
 cd text-analyzer-OpenAI-LLM
@@ -29,7 +29,7 @@ source venv/bin/activate  # Linux/MacOS
 venv\Scripts\activate  # Windows
 
 pip install -r requirements.txt
-
+```
 
 ## 2. Налаштування
 
@@ -64,18 +64,18 @@ text-analyzer-OpenAI-LLM/
 ## Режими роботи
 ## 1. CLI скрипти
 - Генерація підсумку
-
+```
 python scripts/get_summary.py
-
+```
 - Генерація змісту і тез
-
+```
 python scripts/get_contents.py
-
+```
 
 ## 2. REST API
-
+```
 python api/endpoints.py
-
+```
 
 Доступні ендпоінти
 
@@ -84,15 +84,15 @@ python api/endpoints.py
 
 
 ## 3. Веб-інтерфейс
-
+```
 python web/app.py
-
+```
 Відкрийте http://localhost:5001 у браузері
 
 
 ## 4. Telegram бот
-
+```
 python bot/bot.py
-
+```
 
 
