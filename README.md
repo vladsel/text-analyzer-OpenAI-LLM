@@ -90,7 +90,7 @@ python web/app.py
 Відкрийте http://localhost:5001 у браузері
 
 
-4. Telegram бот
+### 4. Telegram бот
 
 python bot/bot.py
 
