@@ -16,7 +16,7 @@
 - Telegram бот (для режиму бота)
 
 ## Швидкий старт
-1. Встановлення
+## 1. Встановлення
 
 git clone https://github.com/vladsel/text-analyzer-OpenAI-LLM.git
 
@@ -31,7 +31,7 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 
 
-2. Налаштування
+## 2. Налаштування
 
 Створіть .env файл на основі .env.example
 
@@ -42,7 +42,7 @@ OPENAI_KEY="your_openai_key"
 TELEGRAM_BOT_TOKEN="yyour_telegram_bot_token"
 
 
-3. Структура проекту
+## 3. Структура проекту
 
 text-analyzer-OpenAI-LLM/
 
@@ -62,7 +62,7 @@ text-analyzer-OpenAI-LLM/
 
 
 ## Режими роботи
-1. CLI скрипти
+## 1. CLI скрипти
 - Генерація підсумку
 
 python scripts/get_summary.py
@@ -72,7 +72,7 @@ python scripts/get_summary.py
 python scripts/get_contents.py
 
 
-2. REST API
+## 2. REST API
 
 python api/endpoints.py
 
@@ -83,7 +83,7 @@ python api/endpoints.py
 - POST /api/v1/get_contents_and_theses
 
 
-3. Веб-інтерфейс
+## 3. Веб-інтерфейс
 
 python web/app.py
 
