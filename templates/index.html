@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Аналіз тексту</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        input, select, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .error {
+            margin-top: 20px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Завантаження документа для аналізу</h2>
+
+<form action="/" enctype="multipart/form-data" method="post">
+    <input name="doc_file" required type="file">
+    <label>
+        <select name="analysis_type" required>
+            <option value="summary">Генерація підсумку</option>
+            <option value="contents">Генерація змісту</option>
+        </select>
+    </label>
+    <button type="submit">Надіслати</button>
+</form>
+
+{% if result %}
+<p class="result">{{ result | replace("\n", "<br>") | safe }}</p>
+{% endif %}
+
+{% if error %}
+<p class="error">{{ error | replace("\n", "<br>") | safe }}</p>
+{% endif %}
+
+</body>
+</html>
