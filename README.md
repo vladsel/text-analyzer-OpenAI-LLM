@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 
 3. Налаштування
-4. 
+
 Створіть .env файл на основі .env.example
 
 Вкажіть свої ключі:
