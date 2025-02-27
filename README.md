@@ -31,7 +31,7 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 
 
-3. Налаштування
+2. Налаштування
 
 Створіть .env файл на основі .env.example
 
