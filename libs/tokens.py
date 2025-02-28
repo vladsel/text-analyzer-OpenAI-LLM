@@ -10,6 +10,8 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORT_FILE = os.path.join(BASE_DIR, os.getenv("REPORT_FILE"))
 
+local_tz = datetime.now().astimezone().tzinfo
+
 
 def write_tokens_usage_report(prompt: str, model: str, prompt_tokens: int,
                               completion_tokens: int, execution_time: float):
@@ -19,7 +21,7 @@ def write_tokens_usage_report(prompt: str, model: str, prompt_tokens: int,
         raise ValueError("Час виконання та кількість використаних токенів не можуть бути менше нуля")
 
     report_entry = {
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(local_tz).isoformat(),
         "prompt": prompt,
         "model": model,
         "prompt_tokens": prompt_tokens,

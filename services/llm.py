@@ -25,7 +25,7 @@ class Llm:
         self.client = openai.Client(api_key=self._OPENAI_KEY)
 
     def generate_call(self, messages: list[dict[str, str]],
-                      tokens: int = 850, temperature: float = 0.7) -> dict:
+                      tokens: int = 1024, temperature: float = 0.7) -> dict:
         if tokens <= 0 or tokens > self.MAX_TOKENS:
             raise ValueError(f"Задана невірна кількість токенів. Допустимі значення: 1-{self.MAX_TOKENS}")
         if temperature < 0 or temperature > 1:

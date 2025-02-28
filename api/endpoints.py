@@ -43,7 +43,7 @@ def generate_request(class_generator, text_doc: str, text_generated: str):
             generator = class_generator(ctx, text_document_api, text_generated_api)
             executed_prompt = generator.start_generating()
 
-        log_info(f"Запит через Flask виконано, відображено результати виконання"
+        log_info(f"Запит через Flask виконано, відображено результати виконання "
                  f"{class_generator.__name__} і збережено у відповідному файлі")
         return jsonify({"message": executed_prompt}), 200
 
