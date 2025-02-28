@@ -98,10 +98,10 @@ python api/endpoints.py
 ```
 
 Доступні ендпоінти
-
+```
 - POST /api/v1/get_summary
 - POST /api/v1/get_contents_and_theses
-
+```
 
 - Приклад запиту через curl
 ```
@@ -135,7 +135,8 @@ GENERATED_CONTENTS="results/generated_contents_text_file.txt" # Шлях для 
 python make_request.py # Виконати обидва запити
 ```
 ```
-python make_request.py summary # Або виконати окремо
+# Або виконати окремо
+python make_request.py summary
 python make_request.py contents
 ```
 
